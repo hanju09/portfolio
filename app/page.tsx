@@ -45,12 +45,19 @@ export default function Home() {
               automation that just works.
             </p>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+            <div className="mt-10 flex flex-wrap gap-4 justify-center md:justify-start">
               <a
                 href="#projects"
                 className="px-8 py-3 rounded-full bg-cyan-400 text-black font-semibold hover:bg-cyan-300 transition-all hover:scale-105 text-center"
               >
                 View My Work
+              </a>
+              <a
+                href="/cv.pdf"
+                download
+                className="px-8 py-3 rounded-full border border-white/20 text-white font-semibold hover:border-cyan-400 hover:text-cyan-400 transition-all text-center"
+              >
+                Download CV
               </a>
               <a
                 href="#contact"
