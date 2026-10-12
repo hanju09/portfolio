@@ -37,20 +37,17 @@ export default function Skills() {
           What I work with.
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-x-10 gap-y-12">
           {skillGroups.map((group) => (
-            <div
-              key={group.title}
-              className="p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-cyan-400/40 transition-colors"
-            >
-              <h3 className="text-lg font-semibold mb-4 text-white">
+            <div key={group.title}>
+              <h3 className="inline-block text-lg font-semibold mb-4 px-3 py-1 rounded-lg text-white bg-[#0d0620]/80 backdrop-blur-sm border border-white/10 shadow-md shadow-black/40">
                 {group.title}
               </h3>
               <ul className="flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
                   <li
                     key={skill}
-                    className="px-3 py-1 rounded-full text-sm text-gray-300 border border-white/10 bg-white/[0.03]"
+                    className="px-3 py-1 rounded-full text-sm text-gray-100 border border-white/10 bg-[#0d0620] shadow-md shadow-black/40"
                   >
                     {skill}
                   </li>

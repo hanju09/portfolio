@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
+  --background: #06030f;
   --foreground: #ededed;
   --accent: #22d3ee;
 }
@@ -24,11 +24,16 @@ body {
 }
 
 body {
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 0%, rgba(139, 92, 246, 0.22), transparent 65%),
+    radial-gradient(ellipse 70% 50% at 85% 20%, rgba(236, 72, 153, 0.15), transparent 65%),
+    radial-gradient(ellipse 60% 50% at 50% 100%, rgba(34, 211, 238, 0.12), transparent 60%),
+    #06030f;
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Offset anchor scroll for fixed navbar */
 section[id] {
   scroll-margin-top: 80px;
 }
@@ -38,17 +43,44 @@ section[id] {
   color: #000;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: #06030f;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1f1f1f;
+  background: #221540;
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #22d3ee;
+  background: #8b5cf6;
+}
+
+/* Animated gradient text for name */
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(
+    90deg,
+    #22d3ee 0%,
+    #8b5cf6 25%,
+    #ec4899 50%,
+    #8b5cf6 75%,
+    #22d3ee 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradient-shift 6s ease infinite;
 }

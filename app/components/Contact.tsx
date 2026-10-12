@@ -22,19 +22,19 @@ export default function Contact() {
       id="contact"
       className="relative py-24 px-6 border-t border-white/10"
     >
-      <div className="max-w-3xl mx-auto text-center">
-        <p className="text-sm tracking-widest uppercase text-cyan-400 mb-3">
+      <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
+        <p className="inline-block text-sm tracking-widest uppercase text-cyan-400 mb-3 px-3 py-1 rounded-lg bg-[#0d0620]/80 backdrop-blur-sm border border-white/10">
           Contact
         </p>
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+        <h2 className="w-fit text-4xl md:text-5xl font-bold tracking-tight mb-4 px-3 py-1 rounded-lg bg-[#0d0620]/75">
           Let&apos;s build something.
         </h2>
-        <p className="text-gray-400 mb-12 max-w-xl mx-auto">
+        <p className="w-fit max-w-xl text-gray-200 mb-12 px-3 py-1 rounded-lg bg-[#0d0620]/70">
           Whether it&apos;s a project, a role, or just a conversation about
           databases and clean code — I&apos;m open to it.
         </p>
 
-        <div className="grid sm:grid-cols-3 gap-4 mb-12">
+        <div className="grid sm:grid-cols-3 gap-x-8 gap-y-8 mb-12 w-full">
           {links.map((link) => (
             <a
               key={link.label}
@@ -45,26 +45,27 @@ export default function Contact() {
                   ? "noopener noreferrer"
                   : undefined
               }
-              className="p-5 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-cyan-400/40 transition-colors text-left"
+              className="group text-left"
             >
-              <p className="text-xs tracking-widest uppercase text-gray-500 mb-2">
+              <p className="inline-block text-xs tracking-widest uppercase text-cyan-400 mb-2 px-2.5 py-1 rounded-md bg-[#0d0620]/95 border border-cyan-400/30">
                 {link.label}
               </p>
-              <p className="text-sm text-white break-all">{link.value}</p>
+              <p className="w-fit text-sm text-white break-all px-2 py-1 rounded bg-[#0d0620]/85 group-hover:text-cyan-400 transition-colors">
+                {link.value}
+              </p>
             </a>
           ))}
         </div>
 
         <a
           href="mailto:alihamza6800088@gmail.com"
-          className="inline-block px-8 py-3 rounded-full bg-cyan-400 text-black font-semibold hover:bg-cyan-300 transition-all hover:scale-105"
+          className="inline-block px-8 py-3 rounded-full bg-cyan-400 text-black font-semibold hover:bg-cyan-300 transition-all hover:scale-105 shadow-lg shadow-cyan-400/30"
         >
           Say Hello
         </a>
 
-        <p className="mt-16 text-xs text-gray-600">
-          © 2026 Hamza. Built from scratch with Next.js
-          &amp; Tailwind.
+        <p className="mt-16 w-fit text-xs text-gray-500 px-2 py-0.5 rounded bg-[#0d0620]/60">
+          © 2026 Hamza. Built from scratch with Next.js &amp; Tailwind.
         </p>
       </div>
     </section>

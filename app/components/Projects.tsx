@@ -40,39 +40,38 @@ export default function Projects() {
       className="relative py-24 px-6 border-t border-white/10"
     >
       <div className="max-w-5xl mx-auto">
-        <p className="text-sm tracking-widest uppercase text-cyan-400 mb-3">
+        <p className="inline-block text-sm tracking-widest uppercase text-cyan-400 mb-3 px-3 py-1 rounded-lg bg-[#0d0620]/85 backdrop-blur-sm border border-white/10">
           Projects
         </p>
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+        <h2 className="w-fit text-4xl md:text-5xl font-bold tracking-tight mb-4 px-3 py-1 rounded-lg bg-[#0d0620]/75 backdrop-blur-sm">
           Things I&apos;ve built.
         </h2>
-        <p className="text-gray-400 mb-12 max-w-2xl">
+        <p className="w-fit text-gray-200 mb-12 px-3 py-1 rounded-lg bg-[#0d0620]/70">
           A mix of real-world work and hands-on database projects.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-x-10 gap-y-12">
           {projects.map((project) => (
-            <div
-              key={project.title}
-              className="group relative flex flex-col p-6 rounded-2xl border border-white/10 bg-white/[0.02] hover:border-cyan-400/40 transition-colors"
-            >
-              <p className="text-xs tracking-widest uppercase text-cyan-400 mb-2">
+            <div key={project.title}>
+              <p className="inline-block text-xs tracking-widest uppercase text-cyan-400 mb-3 px-2.5 py-1 rounded-md bg-[#0d0620]/90 border border-white/10">
                 {project.tag}
               </p>
 
-              <h3 className="text-xl font-semibold mb-3 text-white">
+              <h3 className="w-fit text-xl font-semibold mb-3 px-2 py-0.5 rounded bg-[#0d0620]/80">
                 {project.title}
               </h3>
 
-              <p className="text-sm text-gray-400 leading-relaxed mb-5 flex-1">
-                {project.description}
+              <p className="text-sm text-gray-200 leading-relaxed mb-4">
+                <span className="inline px-2 py-0.5 rounded bg-[#0d0620]/70 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">
+                  {project.description}
+                </span>
               </p>
 
-              <ul className="flex flex-wrap gap-2 mb-5">
+              <ul className="flex flex-wrap gap-2 mb-4">
                 {project.tech.map((t) => (
                   <li
                     key={t}
-                    className="px-2.5 py-0.5 rounded-full text-xs text-gray-300 border border-white/10 bg-white/[0.03]"
+                    className="px-2.5 py-0.5 rounded-full text-xs text-gray-100 border border-white/15 bg-[#0d0620]/85"
                   >
                     {t}
                   </li>
@@ -84,12 +83,12 @@ export default function Projects() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors"
+                  className="inline-block text-sm font-medium text-cyan-400 hover:text-cyan-300 transition-colors px-2 py-0.5 rounded bg-[#0d0620]/75"
                 >
                   View on GitHub →
                 </a>
               ) : (
-                <span className="text-sm font-medium text-gray-500">
+                <span className="inline-block text-sm font-medium text-gray-500 px-2 py-0.5 rounded bg-[#0d0620]/75">
                   Internal project
                 </span>
               )}
