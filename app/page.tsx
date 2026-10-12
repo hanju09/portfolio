@@ -43,8 +43,8 @@ export default function Home() {
             </h1>
 
             <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
-               I build reliable software with Python, Java, and SQL focused
-              on databases, automation, and systems that just work..
+              I build reliable software with Python, Java, and SQL — focused
+              on databases, automation, and systems that just work.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4 justify-center md:justify-start">
@@ -70,10 +70,30 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Photo with floating circular gradient ring */}
           <div className="relative flex justify-center md:justify-end">
-            <div className="relative self-center">
-              <div className="absolute inset-0 bg-cyan-400/30 rounded-full blur-[80px]" />
-              <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-cyan-400/40">
+            {/* Floating wrapper — moves the whole group up/down/side */}
+            <div className="relative self-center animate-float">
+              {/* Rotating thin ring */}
+              <div
+                className="absolute -inset-1 md:-inset-1.5 rounded-full opacity-90 blur-[3px] animate-ring-rotate"
+                style={{
+                  background:
+                    "conic-gradient(from 0deg, #8b5cf6, #ec4899, #22d3ee, #8b5cf6)",
+                }}
+              />
+
+              {/* Soft outer glow with gentle pulse */}
+              <div
+                className="absolute -inset-4 md:-inset-6 rounded-full animate-ring-glow"
+                style={{
+                  background:
+                    "conic-gradient(from 0deg, #8b5cf6, #ec4899, #22d3ee, #8b5cf6)",
+                }}
+              />
+
+              {/* Photo */}
+              <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-white/20">
                 <Image
                   src="/profile.jpg"
                   alt="Hamza"
@@ -111,4 +131,4 @@ export default function Home() {
       </div>
     </>
   );
-} 
+}

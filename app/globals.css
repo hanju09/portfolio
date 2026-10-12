@@ -84,3 +84,59 @@ section[id] {
   color: transparent;
   animation: gradient-shift 6s ease infinite;
 }
+
+/* Ring rotation — perfectly circular, no distortion */
+@keyframes ring-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-ring-rotate {
+  animation: ring-rotate 12s linear infinite;
+  will-change: transform;
+  transform-origin: center center;
+}
+
+/* Gentle pulse glow on the outer blur */
+@keyframes ring-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+    filter: blur(40px);
+  }
+  50% {
+    opacity: 0.85;
+    filter: blur(50px);
+  }
+}
+
+.animate-ring-glow {
+  animation: ring-glow 5s ease-in-out infinite;
+  will-change: opacity, filter;
+}
+
+/* Floating motion — gentle up/down + side-to-side drift */
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(6px, -10px);
+  }
+  50% {
+    transform: translate(0px, -14px);
+  }
+  75% {
+    transform: translate(-6px, -10px);
+  }
+}
+
+.animate-float {
+  animation: float 7s ease-in-out infinite;
+  will-change: transform;
+}
