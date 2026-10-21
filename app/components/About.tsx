@@ -1,47 +1,38 @@
 export default function About() {
   return (
-    <section id="about" className="relative py-24 px-6 border-t border-white/10">
+    <section id="about" className="relative py-24 px-6 border-t border-gray-200 bg-white/70 backdrop-blur-sm">
       <div className="max-w-5xl mx-auto">
-        <p className="inline-block text-sm tracking-widest uppercase text-cyan-400 mb-3 px-3 py-1 rounded-lg bg-[#0d0620]/85 backdrop-blur-sm border border-white/10">
+        <p className="text-sm tracking-widest uppercase text-indigo-600 font-semibold mb-3">
           About
         </p>
-        <h2 className="w-fit text-4xl md:text-5xl font-bold tracking-tight mb-8 px-3 py-1 rounded-lg bg-[#0d0620]/75 backdrop-blur-sm">
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-8 text-gray-900">
           A developer who cares about the details.
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-x-10 gap-y-6 text-gray-200 leading-relaxed text-[15px]">
-          <div className="space-y-4">
+        <div className="grid md:grid-cols-2 gap-10 text-gray-600 leading-relaxed text-lg">
+          <div className="space-y-6">
             <p>
-              <span className="inline px-2 py-0.5 rounded bg-[#0d0620]/70 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">
-                I&apos;m a Full-Stack Developer focused on building products
-                that feel fast, look sharp, and solve real problems. From
-                frontend interactions to backend architecture, I enjoy owning
-                the full stack.
-              </span>
+              I&apos;m a Full-Stack Developer focused on building products that
+              feel fast, look sharp, and solve real problems. From frontend
+              interactions to backend architecture, I enjoy owning the full
+              stack.
             </p>
             <p>
-              <span className="inline px-2 py-0.5 rounded bg-[#0d0620]/70 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">
-                My toolkit centers around the modern JavaScript ecosystem —
-                React, Next.js, Node.js, and TypeScript — paired with a strong
-                eye for design and user experience.
-              </span>
+              My toolkit centers around the modern JavaScript ecosystem —
+              React, Next.js, Node.js, and TypeScript — paired with a strong
+              eye for design and user experience.
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-6">
             <p>
-              <span className="inline px-2 py-0.5 rounded bg-[#0d0620]/70 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">
-                I believe great software is more than working code. It&apos;s
-                about clarity, performance, and the small details that make an
-                experience memorable.
-              </span>
+              I believe great software is more than working code. It&apos;s
+              about clarity, performance, and the small details that make an
+              experience memorable.
             </p>
             <p>
-              <span className="inline px-2 py-0.5 rounded bg-[#0d0620]/70 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">
-                When I&apos;m not building, I&apos;m exploring new tools,
-                refining my craft, and looking for the next problem worth
-                solving.
-              </span>
+              When I&apos;m not building, I&apos;m exploring new tools,
+              refining my craft, and looking for the next problem worth solving.
             </p>
           </div>
         </div>

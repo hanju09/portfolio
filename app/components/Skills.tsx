@@ -10,16 +10,16 @@ const skillGroups = [
   {
     title: "Database Admin",
     skills: [
-      "Schema Design",
+      "Design",
       "Query Optimization",
       "Migrations",
-      "Backup & Recovery",
       "Data Integrity",
+      "Backup & Recovery",
     ],
   },
   {
     title: "Tools & Web",
-    skills: ["Git", "GitHub", "Django", "HTML", "CSS", "Linux", "Windows"],
+    skills: ["Django", "HTML", "CSS", "Git", "GitHub", "Google Drive", "Windows"],
   },
 ];
 
@@ -27,27 +27,27 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative py-24 px-6 border-t border-white/10"
+      className="relative py-24 px-6 border-t border-gray-200 bg-gray-50/70 backdrop-blur-sm"
     >
       <div className="max-w-5xl mx-auto">
-        <p className="text-sm tracking-widest uppercase text-cyan-400 mb-3">
+        <p className="text-sm tracking-widest uppercase text-indigo-600 font-semibold mb-3">
           Skills
         </p>
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-12">
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-12 text-gray-900">
           What I work with.
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-x-10 gap-y-12">
+        <div className="grid md:grid-cols-2 gap-x-12 gap-y-12">
           {skillGroups.map((group) => (
             <div key={group.title}>
-              <h3 className="inline-block text-lg font-semibold mb-4 px-3 py-1 rounded-lg text-white bg-[#0d0620]/80 backdrop-blur-sm border border-white/10 shadow-md shadow-black/40">
+              <h3 className="text-lg font-semibold mb-4 text-gray-900 border-b border-gray-200 pb-2">
                 {group.title}
               </h3>
-              <ul className="flex flex-wrap gap-2">
+              <ul className="flex flex-wrap gap-2.5">
                 {group.skills.map((skill) => (
                   <li
                     key={skill}
-                    className="px-3 py-1 rounded-full text-sm text-gray-100 border border-white/10 bg-[#0d0620] shadow-md shadow-black/40"
+                    className="px-3.5 py-1.5 rounded-lg text-sm font-medium text-gray-700 bg-white border border-gray-200 shadow-sm hover:border-indigo-300 hover:text-indigo-600 transition-colors cursor-default"
                   >
                     {skill}
                   </li>

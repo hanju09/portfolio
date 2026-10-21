@@ -5,6 +5,11 @@ const links = [
     href: "mailto:alihamza6800088@gmail.com",
   },
   {
+    label: "LinkedIn",
+    value: "in/ali-hamza-90859826a",
+    href: "https://www.linkedin.com/in/ali-hamza-90859826a",
+  },
+  {
     label: "GitHub",
     value: "github.com/hanju09",
     href: "https://github.com/hanju09",
@@ -20,21 +25,21 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-24 px-6 border-t border-white/10"
+      className="relative py-24 px-6 border-t border-gray-200 bg-white/70 backdrop-blur-sm"
     >
-      <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
-        <p className="inline-block text-sm tracking-widest uppercase text-cyan-400 mb-3 px-3 py-1 rounded-lg bg-[#0d0620]/80 backdrop-blur-sm border border-white/10">
+      <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+        <p className="text-sm tracking-widest uppercase text-indigo-600 font-semibold mb-3">
           Contact
         </p>
-        <h2 className="w-fit text-4xl md:text-5xl font-bold tracking-tight mb-4 px-3 py-1 rounded-lg bg-[#0d0620]/75">
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-gray-900">
           Let&apos;s build something.
         </h2>
-        <p className="w-fit max-w-xl text-gray-200 mb-12 px-3 py-1 rounded-lg bg-[#0d0620]/70">
+        <p className="max-w-xl text-gray-600 mb-12 text-lg">
           Whether it&apos;s a project, a role, or just a conversation about
           databases and clean code — I&apos;m open to it.
         </p>
 
-        <div className="grid sm:grid-cols-3 gap-x-8 gap-y-8 mb-12 w-full">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-12 w-full">
           {links.map((link) => (
             <a
               key={link.label}
@@ -45,12 +50,12 @@ export default function Contact() {
                   ? "noopener noreferrer"
                   : undefined
               }
-              className="group text-left"
+              className="group flex flex-col items-center justify-center p-6 rounded-2xl border border-gray-200 bg-white shadow-sm hover:border-indigo-300 hover:shadow-md transition-all"
             >
-              <p className="inline-block text-xs tracking-widest uppercase text-cyan-400 mb-2 px-2.5 py-1 rounded-md bg-[#0d0620]/95 border border-cyan-400/30">
+              <p className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-2 group-hover:text-indigo-600 transition-colors">
                 {link.label}
               </p>
-              <p className="w-fit text-sm text-white break-all px-2 py-1 rounded bg-[#0d0620]/85 group-hover:text-cyan-400 transition-colors">
+              <p className="text-sm font-medium text-gray-900 break-all group-hover:text-indigo-600 transition-colors">
                 {link.value}
               </p>
             </a>
@@ -59,13 +64,13 @@ export default function Contact() {
 
         <a
           href="mailto:alihamza6800088@gmail.com"
-          className="inline-block px-8 py-3 rounded-full bg-cyan-400 text-black font-semibold hover:bg-cyan-300 transition-all hover:scale-105 shadow-lg shadow-cyan-400/30"
+          className="inline-block px-8 py-3 rounded-full bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition-all hover:scale-105 shadow-lg shadow-indigo-600/20"
         >
           Say Hello
         </a>
 
-        <p className="mt-16 w-fit text-xs text-gray-500 px-2 py-0.5 rounded bg-[#0d0620]/60">
-          © 2026 Hamza. Built from scratch with Next.js &amp; Tailwind.
+        <p className="mt-20 text-sm text-gray-400">
+          © 2026 Hamza. Built with Next.js &amp; Tailwind.
         </p>
       </div>
     </section>

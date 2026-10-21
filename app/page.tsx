@@ -5,26 +5,27 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
-import FadeIn from "./components/FadeIn";
+import ArchitectureSimulation from "./components/ArchitectureSimulation";
 import ParticleBackground from "./components/ParticleBackground";
-import ParticleSphere from "./components/ParticleSphere";
 
 export default function Home() {
   return (
     <>
+      {/* The live background network */}
       <ParticleBackground />
-      <ParticleSphere />
 
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative min-h-screen text-white flex items-center justify-center px-6 pt-24 pb-16 overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative min-h-screen bg-transparent flex items-center justify-center px-6 pt-24 pb-16 overflow-hidden">
+        
+        {/* Subtle blueprint grid in the background */}
         <div
-          className="absolute inset-0 opacity-[0.08] pointer-events-none"
+          className="absolute inset-0 opacity-[0.03] pointer-events-none"
           style={{
             backgroundImage:
-              "linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
+              "linear-gradient(to right, #000000 1px, transparent 1px), linear-gradient(to bottom, #000000 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
             maskImage:
               "radial-gradient(ellipse at center, black 40%, transparent 75%)",
             WebkitMaskImage:
@@ -32,17 +33,19 @@ export default function Home() {
           }}
         />
 
-        <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          
+          {/* Left Side: Text */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <p className="mb-4 text-sm tracking-widest uppercase text-cyan-400 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+            <p className="mb-4 text-sm tracking-widest uppercase text-indigo-600 font-semibold">
               Software Developer · Lahore, Pakistan
             </p>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)]">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900">
               Hi, I&apos;m <span className="animated-gradient">Hamza</span>
             </h1>
 
-            <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+            <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-xl">
               I build reliable software with Python, Java, and SQL — focused
               on databases, automation, and systems that just work.
             </p>
@@ -50,84 +53,62 @@ export default function Home() {
             <div className="mt-10 flex flex-wrap gap-4 justify-center md:justify-start">
               <a
                 href="#projects"
-                className="px-8 py-3 rounded-full bg-cyan-400 text-black font-semibold hover:bg-cyan-300 transition-all hover:scale-105 text-center shadow-lg shadow-cyan-400/30"
+                className="px-8 py-3 rounded-full bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition-all hover:scale-105 text-center shadow-lg shadow-indigo-600/20"
               >
                 View My Work
               </a>
               <a
                 href="/cv.pdf"
                 download
-                className="px-8 py-3 rounded-full border border-white/30 bg-black/40 backdrop-blur-sm text-white font-semibold hover:border-cyan-400 hover:text-cyan-400 transition-all text-center"
+                className="px-8 py-3 rounded-full border border-gray-300 text-gray-700 font-semibold hover:border-indigo-600 hover:text-indigo-600 transition-all text-center bg-white/50 backdrop-blur-sm"
               >
                 Download CV
               </a>
               <a
                 href="#contact"
-                className="px-8 py-3 rounded-full border border-white/30 bg-black/40 backdrop-blur-sm text-white font-semibold hover:border-cyan-400 hover:text-cyan-400 transition-all text-center"
+                className="px-8 py-3 rounded-full border border-gray-300 text-gray-700 font-semibold hover:border-indigo-600 hover:text-indigo-600 transition-all text-center bg-white/50 backdrop-blur-sm"
               >
                 Get in Touch
               </a>
             </div>
           </div>
 
-          {/* Photo with floating circular gradient ring */}
+          {/* Right Side: Photo & Architecture Simulation */}
           <div className="relative flex justify-center md:justify-end">
-            {/* Floating wrapper — moves the whole group up/down/side */}
-            <div className="relative self-center animate-float">
-              {/* Rotating thin ring */}
-              <div
-                className="absolute -inset-1 md:-inset-1.5 rounded-full opacity-90 blur-[3px] animate-ring-rotate"
-                style={{
-                  background:
-                    "conic-gradient(from 0deg, #8b5cf6, #ec4899, #22d3ee, #8b5cf6)",
-                }}
-              />
+            <div className="relative self-center animate-float w-72 h-72 md:w-80 md:h-80">
+              
+              {/* Soft blue/indigo gradient glow behind photo */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-blue-500/20 rounded-full blur-2xl animate-ring-glow" />
 
-              {/* Soft outer glow with gentle pulse */}
-              <div
-                className="absolute -inset-4 md:-inset-6 rounded-full animate-ring-glow"
-                style={{
-                  background:
-                    "conic-gradient(from 0deg, #8b5cf6, #ec4899, #22d3ee, #8b5cf6)",
-                }}
-              />
+              {/* Architecture Simulation */}
+              <div className="absolute -inset-12 md:-inset-20 pointer-events-none z-0 opacity-60">
+                 <ArchitectureSimulation />
+              </div>
 
-              {/* Photo */}
-              <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-2 border-white/20">
+              {/* Profile Photo */}
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-2xl z-10 bg-white">
                 <Image
                   src="/profile.jpg"
                   alt="Hamza"
                   fill
-                  sizes="(max-width: 768px) 256px, 288px"
+                  sizes="(max-width: 768px) 288px, 320px"
                   className="object-cover"
                   priority
                 />
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
+      {/* Main Content Sections (Now without FadeIn) */}
       <div className="relative z-10">
-        <FadeIn>
-          <About />
-        </FadeIn>
-
-        <FadeIn>
-          <Skills />
-        </FadeIn>
-
-        <FadeIn>
-          <Projects />
-        </FadeIn>
-
-        <FadeIn>
-          <Experience />
-        </FadeIn>
-
-        <FadeIn>
-          <Contact />
-        </FadeIn>
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Contact />
       </div>
     </>
   );
